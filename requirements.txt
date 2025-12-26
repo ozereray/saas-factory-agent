@@ -1,0 +1,3 @@
+groq
+PyGithub
+python-dotenv
