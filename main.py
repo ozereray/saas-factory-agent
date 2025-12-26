@@ -11,9 +11,16 @@ g = Github(os.getenv("MY_GITHUB_TOKEN"))
 def generate_saas_content():
     print("🤖 AI (Llama 3) SaaS fikri ve kodu üretiyor...")
     prompt = (
-        "Otomotiv ve global teknoloji dünyasındaki bir sorunu çözen modern bir SaaS fikri üret. "
+        "Sen dünya klasmanında bir Full-Stack yazılım mühendisisin. Alman otomotiv disiplini ve "
+        "küresel teknoloji ekosistemine uygun, yenilikçi bir SaaS fikri üret. "
+        "Üreteceğin çözüm; yapay zeka, veri analitiği veya mobilite teknolojilerini içermeli. "
         "Bana sadece şu JSON formatında yanıt ver:\n"
-        "{\n  \"isim\": \"SaaS ismi\",\n  \"aciklama\": \"Kısa açıklama\",\n  \"html\": \"Tek dosyalık Tailwind CSS içeren HTML kodu\"\n}"
+        "{\n"
+        "  \"isim\": \"SaaS ismi\",\n"
+        "  \"aciklama\": \"Profesyonel ve kısa bir açıklama\",\n"
+        "  \"html\": \"Modern, Tailwind CSS (CDN üzerinden) kullanan, karanlık mod (dark mode) destekli, "
+        "animasyonlu ve mobil uyumlu tam kapsamlı bir Landing Page HTML kodu.\"\n"
+        "}"
     )
 
     completion = client.chat.completions.create(
